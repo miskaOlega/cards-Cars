@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice , PayloadAction } from "@reduxjs/toolkit";
 import axios from "axios";
 
-type TypeJson = {
+export type TypeJson = {
     id: number,
     images: string ,
     name: string,

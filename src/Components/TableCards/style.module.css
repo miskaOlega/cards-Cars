@@ -1,0 +1,26 @@
+
+div#main {
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
+div#tableCards {
+    gap: 5vh 5vh;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    div {
+        background-color: #cf9898;
+        border-radius: 5vh;
+        img {
+            margin: 5vh 5vh 0vh 5vh;
+            border: 0.5vh solid ;
+            height: 20vh;
+            width: 20vh;
+        }
+        h1 {
+            font-size: 2.5vh;
+            text-align: center;
+            font-family: sans-serif;
+        }
+    }
+}
+}

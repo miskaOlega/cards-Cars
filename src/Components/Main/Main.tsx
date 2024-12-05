@@ -1,8 +1,8 @@
 import style from './style.module.css';
 import { useDispatch , useSelector} from 'react-redux';
 import { AppDispatch , RootState } from '../../Redux/store';
-import { useEffect } from 'react';
-import { getApi } from '../../Redux/selector';
+import { useEffect, useState } from 'react';
+import { getApi , TypeJson} from '../../Redux/selector';
 import { NavLink, Outlet, useNavigate } from 'react-router-dom';
 
 export const Main = () => {
@@ -22,7 +22,7 @@ export const Main = () => {
         dispatch(getApi());
         nav("/products");
     } , []);
-    console.log(statuse.data);
+    const stateOutlet:TypeJson[] = statuse.data;
     return (
         <>
         <div id={style.main}>
@@ -35,7 +35,7 @@ export const Main = () => {
             </header>
 
             <article id={style.article}>
-                <Outlet />
+                <Outlet context={stateOutlet} />
             </article>
         </div>
         </>
