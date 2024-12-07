@@ -1,13 +1,22 @@
 
 div#main {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     margin-top: 10vh;
+    header#header {
+        background-color: red;
+        padding: 0vh 50vh 0vh 50vh;
+        font-size: 2vh;
+        font-family: sans-serif;
+        border-radius: 2vh;
+        margin-bottom: 2vh;
+    }
 div#tableCards {
     gap: 5vh 5vh;
     display: grid;
     grid-template-columns: auto auto auto;
-    div {
+    div.blockTable {
         background-color: #cf9898;
         border-radius: 5vh;
         img {
@@ -23,4 +32,8 @@ div#tableCards {
         }
     }
 }
+}
+
+div.lickDeleteFavorite {
+    background-color: #cf9898;
 }

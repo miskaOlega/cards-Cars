@@ -1,0 +1,39 @@
+div#main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 86vh;
+}
+
+div#leftContent {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    img {
+    width: 50vh;
+    border-radius: 2vh;
+    border: 0.5vh double blueviolet;
+    }
+}
+
+div#middleContent {
+    border: 0.1vh solid black;
+    height: 100%;
+}
+
+div#rightContent {
+    width: 50%;
+display: flex;
+flex-direction: column;
+align-items: center;
+h1 {
+    font-size: 5vh;
+}
+p {
+    font-size: 2vh;
+}
+p#textInfo {
+    width: 50%;
+    text-align: justify;
+}
+}

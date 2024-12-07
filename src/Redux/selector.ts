@@ -19,8 +19,8 @@ const initialState = { data: [] , loading: false , errors: true } satisfies Type
 
 export const getApi = createAsyncThunk("Api" , async(_, thunk) => {
     try {
-        const json = await axios.get("http://localhost:3001/sale");
-    return json.data
+        const json = await axios.get("https://miskaolega.github.io/json-api-server/cardsOfCars.json");
+    return json.data.sale
     } catch (error) {
         thunk.fulfillWithValue(error)
     }
