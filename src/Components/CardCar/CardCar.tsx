@@ -1,16 +1,17 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import style from './style.module.css';
 import {useOutletContext } from 'react-router-dom';
 import {TypeJson} from '../../Redux/selector';
 
 export const CardCar = () => {
-    const stateOutlet: TypeJson[] = useOutletContext();
+    const stateOutlet: [TypeJson[] , string | null | undefined] = useOutletContext();
     const {ids} = useParams();
-    const stateOutIds = () => stateOutlet.find(i => i.id === Number(ids))
+    const stateOutIds = () => stateOutlet[0].find(i => i.id === Number(ids));
+    const nav = useNavigate();
     return (
         <>
         <div id={style.main}>
-
+        <button onClick={() => {nav(-1)}}>Вернуться назад</button>
             <div id={style.leftContent}>
                 <img src={stateOutIds()?.images} alt={stateOutIds()?.name}/>
             </div>

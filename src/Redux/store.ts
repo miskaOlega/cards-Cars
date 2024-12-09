@@ -7,6 +7,7 @@ export type AppStore = typeof store;
 
 const reducers = combineReducers({
     getApi: slice.reducer
+    
 })
 
 export const store = configureStore({

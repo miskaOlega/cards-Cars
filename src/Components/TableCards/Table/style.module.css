@@ -1,0 +1,35 @@
+div#tableCards {
+    gap: 5vh 5vh;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    div.blockTable {
+        background-color: #cf9898;
+        border-radius: 5vh;
+        img {
+            margin: 5vh 5vh 0vh 5vh;
+            border: 0.5vh solid ;
+            height: 20vh;
+            width: 20vh;
+        }
+        h1 {
+            font-size: 2.5vh;
+            text-align: center;
+            font-family: sans-serif;
+        }
+    }
+}
+
+div.lickDeleteFavorite {
+    border-radius: 2vh;
+    border: outset black;
+    background-color: #cf9898;
+    display: flex;
+    justify-content: space-around;
+    .lickes {
+        cursor: pointer;
+    }
+    p {
+        font-size: 1.5vh;
+        text-align: center;
+    }
+}
