@@ -11,6 +11,13 @@ export interface TypeJson  {
     
 }
 
+interface IntNew {
+    name: string ,
+    images: string ,
+    information: string,
+    sale: number
+}
+
 type TypeInitState = {
     data: TypeJson[];
     loading: boolean ,
@@ -65,6 +72,11 @@ export const slice = createSlice({
         } else {
             return state
         }
+        } ,
+        newCard: (state , {payload: obj}:PayloadAction<IntNew>) => {
+         state.data.push({id: state.data[state.data.length -1].id + 1 , likesOfUsers: [] , ...obj});
+         return state;
+
         }
     }, 
     extraReducers: apiInfa => {

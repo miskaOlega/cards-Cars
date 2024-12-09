@@ -34,7 +34,7 @@ export const FavoriteProducts = () => {
                         <p><BsFillFileEarmarkFill className={style.lickes} onClick={() => {
                             dispatch(slice.actions.favorites(i.id));
                         }}/></p>
-                        <p style={{fontSize: "1vh" , marginTop: "-1vh"}}>Добавить в избранное</p>
+                        <p style={{fontSize: "1vh" , marginTop: "-1vh"}}>Убрать из избранного</p>
                         </div>
                         </div>
                         </div>

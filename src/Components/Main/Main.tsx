@@ -17,6 +17,7 @@ export const Main = () => {
     const statuse = useAppSelector(state => state.getApi)
     const dispatch = useAppDispatch();
     const nav = useNavigate();
+    console.log(statuse.data)
     const activeLink = ({isActive}: {isActive: boolean}):TypeActiveLink => ({
         textDecoration: "none",
         WebkitTextStroke: "0.01vh black",
